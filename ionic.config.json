@@ -1,0 +1,8 @@
+{
+  "name": "crypto-cards",
+  "app_id": "25eb1c4e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
