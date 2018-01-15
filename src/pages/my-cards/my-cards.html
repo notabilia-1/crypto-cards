@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>My Cards</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="settings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-lg-3 col-md-4 col-sm-6 col-xs-12 *ngFor="let card of cards">
+        <button class="card-button" (click)="openCard($event, card)">
+          <div class="wrapper">
+            <div class="clash-card {{card.name}}">
+              <div class="clash-card__image clash-card__image--{{card.name}}">
+                <img src={{card.image}} alt="{{card.name}}" />
+              </div>
+              <div class="clash-card__level clash-card__level--barbarian">Level {{card.level}}</div>
+              <div class="clash-card__unit-name">The {{card.name}}</div>
+              <div class="clash-card__unit-description">
+                {{card.description}}
+              </div>
+
+              <div class="clash-card__unit-stats clash-card__unit-stats--{{card.name}} clearfix">
+                <div class="one-third">
+                  <div class="stat">{{card.training}}<sup>S</sup></div>
+                  <div class="stat-value">Training</div>
+                </div>
+
+                <div class="one-third">
+                  <div class="stat">{{card.speed}}</div>
+                  <div class="stat-value">Speed</div>
+                </div>
+
+                <div class="one-third no-border">
+                  <div class="stat">{{card.cost}}</div>
+                  <div class="stat-value">Cost</div>
+                </div>
+
+              </div>
+
+            </div> <!-- end clash-card -->
+          </div> <!-- end wrapper -->
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Buy/Trade</ion-title>
+  </ion-toolbar>
+</ion-footer>

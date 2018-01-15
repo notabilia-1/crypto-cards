@@ -1,0 +1,47 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+
+  <div class="wrapper">
+  	<div class="container">
+  		<h1>Welcome</h1>
+
+  		<form class="form">
+  			<input type="text" placeholder="Username">
+  			<input type="password" placeholder="Password">
+        <button type="submit" id="login-button" (click)="login()">Login</button>
+  		</form>
+
+      <hr>
+
+      <form style="padding: 0;">
+        <button class="social-media facebook" id="facebook-login-button" (click)="facebookLogin()">Connect to Facebook</button>
+      </form>
+
+      <form style="padding: 0;">
+        <button class="social-media twitter" id="twitter-login-button" (click)="twitterLogin()">Connect to Twitter</button>
+      </form>
+
+      <form style="padding: 0;">
+        <button class="social-media google" id="google-login-button" (click)="googleLogin()">Connect to Google</button>
+      </form>
+
+  	</div>
+
+  	<ul class="bg-bubbles">
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  		<li></li>
+  	</ul>
+  </div>
+
+</ion-content>
